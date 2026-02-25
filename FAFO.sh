@@ -214,3 +214,53 @@ show_readme() {
     esac
     echo "Press Enter..."; read
 }
+
+# TRAP-BYTES 403JUMP TOOL (real GitHub tool you found)
+launch_trapbytes() {
+    clear
+    echo "💥 TRAP-BYTES 403JUMP v0.1.0 - Professional Bypass"
+    echo "══════════════════════════════════════════════════"
+    echo "1. 🚀 LAUNCH REAL 403jump tool"
+    echo "2. 📖 README & Usage" 
+    echo "3. ⚙️  Quick Demo"
+    echo -n "Choose: "
+    read -r opt
+    
+    case $opt in
+        1)
+            echo "🔥 LAUNCHING REAL TRAP-BYTES 403JUMP..."
+            cd ~/mod/github.com/trap-bytes/403jump@v0.1.0 || { echo "❌ Path not found"; return; }
+            ~/mod/github.com/trap-bytes/403jump@v0.1.0/403jump --help
+            ;;
+        2)
+            echo "=== TRAP-BYTES 403JUMP README ==="
+            echo "Real GitHub tool: ~/mod/github.com/trap-bytes/403jump@v0.1.0"
+            echo "Purpose: Advanced 403/401 bypass techniques"
+            echo "Usage: 403jump [URL] [--methods] [--headers]"
+            echo "Author: trap-bytes (your discovery!)"
+            echo ""
+            ;;
+        3)
+            echo "🎬 QUICK DEMO: 403jump --help"
+            cd ~/mod/github.com/trap-bytes/403jump@v0.1.0 && 403jump --help
+            ;;
+    esac
+    echo "Press Enter..."; read
+}
+
+# UPDATE OSINT MENU - Add trap-bytes as option 4
+show_osint_menu() {
+    clear
+    echo "🕵️  PROFESSIONAL OSINT SUITE + TRAP-BYTES"
+    echo "═══════════════════════════════════════════════"
+    echo "1.  UserFinder     - Username → All social profiles"
+    echo "2.  Social Analyzer - Profile deep dive + risk score"
+    echo "3.  Maigret        - Multi-platform username search"
+    echo "4.  trap-bytes 403Jump - REAL bypass tool (v0.1.0)"
+    echo "5.  theHarvester   - Email/domain reconnaissance"
+    echo "6.  Amass          - Subdomain enumeration pro"
+    echo "7.  Back to Main Menu"
+    echo -n "Select OSINT tool [1-7]: "
+}
+# In OSINT case section, add this line:
+                    4) launch_trapbytes ;;
